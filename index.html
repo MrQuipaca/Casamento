@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menu de casamento de Orlando Matumona e Mónica Matumona. Escolha os pratos, guarnições, cocktails e bebidas.">
+  <title>Orlando & Mónica | Menu de Casamento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="inicio">
+    <nav class="navbar container">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <span>O & M</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a class="active" href="#inicio">Início</a>
+        <a href="#pratos">Pratos</a>
+        <a href="#tipicos">Pratos da Terra</a>
+        <a href="#guarnicoes">Guarnições</a>
+        <a href="#cocktails">Cocktails</a>
+        <a href="#bebidas">Bebidas</a>
+        <a href="#escolha">Confirmar Escolha</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <p class="eyebrow">O NOSSO CASAMENTO</p>
+        <h1>Orlando Matumona <span>&</span> Mónica Matumona</h1>
+        <div class="ornament">♡</div>
+        <h2>Menu de Casamento</h2>
+        <p class="hero-text">Escolha os sabores que farão parte deste dia tão especial.</p>
+        <a class="gold-button" href="#pratos">Explorar o Menu</a>
+      </div>
+    </section>
+
+    <section class="section" id="pratos">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-icon">✦</span>
+          <h2>Pratos Principais</h2>
+          <span class="line"></span>
+        </div>
+        <p class="section-intro">Sabores escolhidos para celebrar este momento inesquecível.</p>
+        <div class="menu-grid" id="mainDishes"></div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="tipicos">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-icon">✦</span>
+          <h2>Pratos Típicos da Terra</h2>
+          <span class="line"></span>
+        </div>
+        <p class="section-intro">A tradição também fará parte da nossa mesa.</p>
+        <div class="menu-grid four" id="traditionalDishes"></div>
+      </div>
+    </section>
+
+    <section class="section" id="guarnicoes">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-icon">✦</span>
+          <h2>Guarnições</h2>
+          <span class="line"></span>
+        </div>
+        <p class="section-intro">Combine os seus pratos favoritos com as nossas guarnições.</p>
+        <div class="menu-grid five" id="sides"></div>
+      </div>
+    </section>
+
+    <section class="quote-banner">
+      <div class="quote-overlay"></div>
+      <div class="quote-content">
+        <p>“Boa comida, bons drinks,<br>melhores momentos!”</p>
+        <span>♥</span>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="cocktails">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-icon">🍸</span>
+          <h2>Cocktails</h2>
+          <span class="line"></span>
+        </div>
+        <div class="menu-grid six" id="cocktailsGrid"></div>
+
+        <div class="drinks-subsection">
+          <div class="subheading"><span>🥭</span><h3>Sumos Naturais</h3></div>
+          <div class="natural-drinks" id="naturalDrinks"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bebidas">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-icon">🥂</span>
+          <h2>Bebidas (Álcool)</h2>
+          <span class="line"></span>
+        </div>
+        <p class="section-intro">A seleção de bebidas alcoólicas será apresentada aqui.</p>
+
+        <div class="alcohol-panel">
+          <div class="bottle-visual">
+            <span>🥃</span><span>🍷</span><span>🥂</span><span>🍾</span>
+          </div>
+          <div>
+            <h3>Brindemos ao amor</h3>
+            <p>à amizade, à família e à vida!</p>
+            <button class="outline-button" type="button" id="addAlcoholBtn">Adicionar bebida à escolha</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="selection-section" id="escolha">
+      <div class="container">
+        <div class="selection-card">
+          <div class="section-heading centered">
+            <span class="section-icon">♡</span>
+            <h2>Confirmar Escolha</h2>
+          </div>
+          <p class="section-intro">Selecione os seus favoritos e confirme a sua escolha.</p>
+
+          <div class="selection-summary">
+            <div>
+              <strong id="selectedCount">0</strong>
+              <span>itens selecionados</span>
+            </div>
+            <button class="clear-button" id="clearSelection" type="button">Limpar seleção</button>
+          </div>
+
+          <div class="selected-list" id="selectedList">
+            <p class="empty-selection">Ainda não selecionou nenhum item.</p>
+          </div>
+
+          <form class="confirm-form" id="confirmForm">
+            <div class="form-grid">
+              <label>
+                Nome
+                <input type="text" id="guestName" placeholder="O seu nome" required>
+              </label>
+              <label>
+                Número de convidados
+                <input type="number" id="guestNumber" min="1" placeholder="Ex.: 2" required>
+              </label>
+            </div>
+            <label>
+              Observações
+              <textarea id="notes" rows="4" placeholder="Alguma preferência ou observação?"></textarea>
+            </label>
+            <button class="gold-button submit-button" type="submit">Confirmar a Minha Escolha</button>
+          </form>
+          <p class="form-message" id="formMessage"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-names">Orlando <span>&</span> Mónica</div>
+      <p>Com amor, família e bons sabores.</p>
+      <p class="copyright">© <span id="year"></span> Orlando Matumona & Mónica Matumona</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
