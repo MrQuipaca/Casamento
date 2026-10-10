@@ -1,707 +1,171 @@
-/* =========================================================
-   MENU DE CASAMENTO
-   Orlando Matumona & Mónica Matumona
-========================================================= */
-
-
-/* =========================================================
-   DADOS DO MENU
-========================================================= */
-
-const menuData = {
-
-    /* =====================================================
-       PRATOS PRINCIPAIS
-    ===================================================== */
-
-    mainDishes: [
-
-        {
-            name: "Bacalhau com Natas",
-            icon: "🐟",
-            description: "Bacalhau cremoso preparado com natas."
-        },
-
-        {
-            name: "Cozido de Peixe",
-            icon: "🐟",
-            description: "Peixe preparado com sabores tradicionais."
-        },
-
-        {
-            name: "Choco Panado com Batatas",
-            icon: "🦑",
-            description: "Choco panado servido com batatas."
-        },
-
-        {
-            name: "Arroz de Pato",
-            icon: "🍗",
-            description: "Arroz de pato preparado no forno."
-        },
-
-        {
-            name: "Caldeirada de Cabrito",
-            icon: "🍖",
-            description: "Cabrito preparado à maneira tradicional."
-        },
-
-        {
-            name: "Bifes de Cogumelos e Ovos",
-            icon: "🥩",
-            description: "Bifes acompanhados de cogumelos e ovos."
-        },
-
-        {
-            name: "Peito de Frango com Natas",
-            icon: "🍗",
-            description: "Peito de frango com molho cremoso de natas."
-        },
-
-        {
-            name: "Lasanha à Bolonhesa",
-            icon: "🍝",
-            description: "Lasanha clássica com molho à bolonhesa."
-        },
-
-        {
-            name: "Caldeirada de Marisco",
-            icon: "🦐",
-            description: "Seleção de mariscos preparada em caldeirada."
-        },
-
-        {
-            name: "Cachupa",
-            icon: "🍲",
-            description: "Prato tradicional preparado com sabores africanos."
-        }
-
-    ],
-
-
-    /* =====================================================
-       PRATOS TÍPICOS DA TERRA
-    ===================================================== */
-
-    traditionalDishes: [
-
-        {
-            name: "Cabidela",
-            icon: "🍲",
-            description: "Um clássico da gastronomia tradicional."
-        },
-
-        {
-            name: "Ginguinga de Cabrito",
-            icon: "🍖",
-            description: "Preparação tradicional de cabrito."
-        },
-
-        {
-            name: "Peito Alto",
-            icon: "🥩",
-            description: "Prato tradicional preparado com sabor autêntico."
-        },
-
-        {
-            name: "Bagre de Muteta",
-            icon: "🐟",
-            description: "Peixe preparado à maneira tradicional."
-        }
-
-    ],
-
-
-    /* =====================================================
-       GUARNIÇÕES
-    ===================================================== */
-
-    sides: [
-
-        {
-            name: "Feijão Preto",
-            icon: "🫘"
-        },
-
-        {
-            name: "Feijão de Óleo de Palma",
-            icon: "🫘"
-        },
-
-        {
-            name: "Kizaca",
-            icon: "🥬"
-        },
-
-        {
-            name: "Sacamadesso",
-            icon: "🥬",
-            description: "Kizaca com feijão."
-        },
-
-        {
-            name: "Mengueleca",
-            icon: "🥗"
-        },
-
-        {
-            name: "Fumbua",
-            icon: "🌿"
-        },
-
-        {
-            name: "Macayabo",
-            icon: "🐟",
-            description: "Com molho de brinjela."
-        },
-
-        {
-            name: "Catato",
-            icon: "🍽️"
-        },
-
-        {
-            name: "Funge de Bombo",
-            icon: "🥣"
-        },
-
-        {
-            name: "Funge de Milho",
-            icon: "🥣"
-        },
-
-        {
-            name: "Arroz Branco",
-            icon: "🍚"
-        },
-
-        {
-            name: "Banana-Pão",
-            icon: "🍌"
-        },
-
-        {
-            name: "Batata Doce",
-            icon: "🍠"
-        },
-
-        {
-            name: "Mandioca Fervida",
-            icon: "🥔"
-        },
-
-        {
-            name: "Batata Frita",
-            icon: "🍟"
-        },
-
-        {
-            name: "Banana Frita",
-            icon: "🍌"
-        },
-
-        {
-            name: "Mandioca Frita",
-            icon: "🥔"
-        },
-
-        {
-            name: "Churrasco",
-            icon: "🔥"
-        },
-
-        {
-            name: "Salada Fria Completa",
-            icon: "🥗"
-        },
-
-        {
-            name: "Meiandungo",
-            icon: "🍲"
-        }
-
-    ],
-
-
-    /* =====================================================
-       COCKTAILS
-    ===================================================== */
-
-    cocktails: [
-
-        {
-            name: "Caipirinha",
-            icon: "🍋"
-        },
-
-        {
-            name: "Lagoa Azul",
-            icon: "🍸"
-        },
-
-        {
-            name: "Piña Colada",
-            icon: "🍍"
-        },
-
-        {
-            name: "Mojito",
-            icon: "🌿"
-        },
-
-        {
-            name: "Love on the Beach",
-            icon: "🍹"
-        },
-
-        {
-            name: "Gin Tónico",
-            icon: "🍸"
-        }
-
-    ],
-
-
-    /* =====================================================
-       SUMOS NATURAIS
-    ===================================================== */
-
-    naturalDrinks: [
-
-        {
-            name: "Maracujá",
-            icon: "🥭"
-        },
-
-        {
-            name: "Ananás",
-            icon: "🍍"
-        },
-
-        {
-            name: "Múcua Mix",
-            icon: "🥤"
-        },
-
-        {
-            name: "Tropical",
-            icon: "🍹"
-        }
-
-    ],
-
-
-    /* =====================================================
-       BEBIDAS ALCOÓLICAS
-    ===================================================== */
-
-    alcohol: [
-
-        {
-            name: "Cerveja Cuca Lata",
-            icon: "🍺"
-        },
-
-        {
-            name: "Cerveja Nocal Lata",
-            icon: "🍺"
-        },
-
-        {
-            name: "Cerveja Eka Lata",
-            icon: "🍺"
-        },
-
-        {
-            name: "Cerveja Booster Lata",
-            icon: "🍺"
-        },
-
-        {
-            name: "Cerveja Doppel Lata",
-            icon: "🍺"
-        },
-
-        {
-            name: "Gin Gordon's",
-            icon: "🍸",
-            description: "Pack 24 × 330 ml."
-        },
-
-        {
-            name: "Smirnoff Ice Lata Preta",
-            icon: "🍾"
-        },
-
-        {
-            name: "Energético Speed",
-            icon: "🥤"
-        },
-
-        {
-            name: "Sumol Lata",
-            icon: "🥤"
-        },
-
-        {
-            name: "Coca-Cola Lata",
-            icon: "🥤"
-        },
-
-        {
-            name: "Água Tónica",
-            icon: "🥤"
-        },
-
-        {
-            name: "Caixa de Champanhe 6GR",
-            icon: "🥂"
-        },
-
-        {
-            name: "Caixa de Amarula",
-            icon: "🥃"
-        },
-
-        {
-            name: "Whisky Black Label",
-            icon: "🥃"
-        },
-
-        {
-            name: "Whisky Jameson",
-            icon: "🥃"
-        },
-
-        {
-            name: "Whisky Red Label",
-            icon: "🥃"
-        },
-
-        {
-            name: "Vinho Monte da Ravasqueira",
-            icon: "🍷"
-        },
-
-        {
-            name: "Vinho Gazela",
-            icon: "🍷"
-        },
-
-        {
-            name: "Água Nboa",
-            icon: "💧"
-        }
-
-    ]
-
+const IMG = {
+  main:        "images/Pratos Principais/",
+  traditional: "images/Pratos da terra/",
+  sides:       "images/Guarnações/",
+  cocktails:   "images/Cocktails/",
+  drinks:      "images/bebidas/"
 };
 
+// Formato: [nome, caminho da imagem]. Use null se ainda não houver imagem.
+const menuData = {
+  mainDishes: [
+    ["Bacalhau com natas",       IMG.main + "Bacalhau-com-Natas.webp"],
+    ["Cozido de peixe",          IMG.main + "Cozido-de-Peixe.webp"],
+    ["Choco panado com batatas", IMG.main + "choco_em_molho_com_batatas.jpg"],
+    ["Arroz de pato",            IMG.main + "Arroz-de-Pato.webp"],
+    ["Caldeirada de cabrito",    IMG.main + "Caldeirada de Cabrito.jpg"],
+    ["Bifes de cogumelos e ovos", IMG.main + "Bifes de Cogumelos e Ovos.jpg"],
+    ["Peito de frango com natas", IMG.main + "Peito de Frango com Natas.webp"],
+    ["Lasanha à bolonhesa",      IMG.main + "Lasanha-a-bolonhesa-com-carne-moida.webp"],
+    ["Caldeirada de marisco",    IMG.main + "Caldeirada de Marisco.jpg"],
+    ["Cachupa",                  IMG.main + "Cachupa.webp"]
+  ],
+  traditionalDishes: [
+    ["Cabidela",             IMG.traditional + "Cabidela.jpg"],
+    ["Ginguinga de cabrito", IMG.traditional + "Ginguinga-de-Cabrito.jpg"],
+    ["Peito Alto",           IMG.traditional + "Peito-Alto.JPG"],
+    ["Bagre de muteta",      IMG.traditional + "Bagre-de-Muteta.webp"]
+  ],
+  sides: [
+    ["Feijão preto",                    IMG.sides + "feijão-preto.webp"],
+    ["Feijão de óleo de palma",         IMG.sides + "feijão-oleo-de-palma.webp"],
+    ["Kizaca",                          IMG.sides + "kizaca.jpg"],
+    ["Sakamadesso (kizaca com feijão)", IMG.sides + "sacamadesso.png"],
+    ["Mengueleca",                      null],
+    ["Fumbua",                          IMG.sides + "fumbwa.jpg"],
+    ["Macayabo com molho de brinjela",  IMG.sides + "Makayabu.webp"],
+    ["Catato",                          IMG.sides + "catato.jpg"],
+    ["Funge de bombo",                  IMG.sides + "funge-de-bombo.jpg"],
+    ["Funge de milho",                  null],
+    ["Arroz branco",                    IMG.sides + "arroz-branco.jpg"],
+    ["Banana pão / Batata doce / Mandioca fervida", IMG.sides + "banana-pão.jpg"],
+    ["Batata frita / Banana frita / Mandioca frita", IMG.sides + "Batata-Frita.webp"],
+    ["Churrasco",                       IMG.sides + "churrasco.jpg"],
+    ["Salada fria completa",            IMG.sides + "Salada-Fria.webp"],
+    ["Meiandungo",                      IMG.sides + "Meiandungo.avif"]
+  ],
+  cocktailsGrid: [
+    ["Caipirinha",        IMG.cocktails + "caipirinha.jpg"],
+    ["Lagoa Azul",        IMG.cocktails + "lagoa azul.jpg"],
+    ["Piña Colada",       IMG.cocktails + "Piña Colada.jpg"],
+    ["Mojito",            IMG.cocktails + "mogito.webp"],
+    ["Love on the Beach", IMG.cocktails + "love on the beach.avif"],
+    ["Gin Tónico",        IMG.cocktails + "Gin tonico.webp"]
+  ],
+  alcoholGrid: [
+    ["Amarula",           IMG.drinks + "amarula.webp"],
+    ["Champanhe",         IMG.drinks + "champanhe.webp"],
+    ["Cuca",              IMG.drinks + "Cuca.webp"],
+    ["Doppel",            IMG.drinks + "doppel.jpg"],
+    ["Eka",               IMG.drinks + "eka.jpg"],
+    ["Nocal",             IMG.drinks + "nocal.png"],
+    ["Gin Gordon's",      IMG.drinks + "gin gordon.jpeg"],
+    ["Smirnoff",          IMG.drinks + "smirnoff.jpg"],
+    ["Vinho Gazela",      IMG.drinks + "vinho-gazela.jpg"],
+    ["Monte da Ravasqueira Reserva (branco)", IMG.drinks + "vinho-monte-da-ravasqueira-reserva-vinho-branco.jpg"],
+    ["Whisky Black Label", IMG.drinks + "whisky-black-label.jpg"],
+    ["Whisky Red Label",   IMG.drinks + "whisky-red-label.jpg"],
+    ["Whisky Jameson",     IMG.drinks + "whisky-jameson.webp"]
+  ]
+};
 
-/* =========================================================
-   CRIAR CARDS DO MENU
-========================================================= */
+const naturalDrinks = ["Maracujá", "Ananás", "Múcua Mix", "Tropical"];
 
-function renderCards(containerId, items) {
+/* =====================================================
+   CARDS
+===================================================== */
 
-    const container = document.getElementById(containerId);
+function makeCard([name, image]) {
+  const card = document.createElement("article");
+  card.className = "menu-card";
 
-    if (!container) {
-        return;
-    }
+  let media;
+  if (image) {
+    media = document.createElement("img");
+    media.src = encodeURI(image);
+    media.alt = name;
+    media.loading = "lazy";
+    media.className = "menu-image";
+  } else {
+    media = document.createElement("div");
+    media.className = "menu-image menu-image--empty";
+    media.setAttribute("role", "img");
+    media.setAttribute("aria-label", name);
+  }
 
-    container.innerHTML = "";
+  const info = document.createElement("div");
+  info.className = "menu-info";
 
-    items.forEach((item, index) => {
+  const title = document.createElement("h3");
+  title.textContent = name;
 
-        const card = document.createElement("article");
-
-        card.className = "menu-card";
-
-        card.style.animationDelay = `${index * 0.05}s`;
-
-        const description = item.description
-            ? `<p>${item.description}</p>`
-            : "";
-
-        card.innerHTML = `
-
-            <div class="menu-image">
-
-                <span class="menu-emoji">
-                    ${item.icon || "🍽️"}
-                </span>
-
-            </div>
-
-            <div class="menu-info">
-
-                <h3>
-                    ${item.name}
-                </h3>
-
-                ${description}
-
-            </div>
-
-        `;
-
-        container.appendChild(card);
-
-    });
-
+  info.appendChild(title);
+  card.append(media, info);
+  return card;
 }
 
-
-/* =========================================================
-   CRIAR CARDS DOS SUMOS NATURAIS
-========================================================= */
-
-function renderNaturalDrinks() {
-
-    const container =
-        document.getElementById("naturalDrinks");
-
-    if (!container) {
-        return;
-    }
-
-    container.innerHTML = "";
-
-    menuData.naturalDrinks.forEach(
-        (drink, index) => {
-
-            const item =
-                document.createElement("div");
-
-            item.className =
-                "natural-drink";
-
-            item.style.animationDelay =
-                `${index * 0.08}s`;
-
-            item.innerHTML = `
-
-                <span class="drink-icon">
-                    ${drink.icon}
-                </span>
-
-                <h4>
-                    ${drink.name}
-                </h4>
-
-            `;
-
-            container.appendChild(item);
-
-        }
-    );
-
+function renderCards(elementId, items) {
+  const container = document.getElementById(elementId);
+  if (!container) return;
+  items.forEach(item => container.appendChild(makeCard(item)));
 }
 
+Object.entries(menuData).forEach(([id, items]) => renderCards(id, items));
 
-/* =========================================================
-   MENU MOBILE
-========================================================= */
+/* =====================================================
+   SUMOS NATURAIS
+===================================================== */
 
-const menuToggle =
-    document.getElementById("menuToggle");
-
-const navLinks =
-    document.getElementById("navLinks");
-
-
-if (menuToggle && navLinks) {
-
-    menuToggle.addEventListener(
-        "click",
-        () => {
-
-            const isOpen =
-                navLinks.classList.toggle("open");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                isOpen
-            );
-
-        }
-    );
-
-
-    /* Fechar o menu quando clicar num link */
-
-    navLinks
-        .querySelectorAll("a")
-        .forEach(link => {
-
-            link.addEventListener(
-                "click",
-                () => {
-
-                    navLinks.classList.remove(
-                        "open"
-                    );
-
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                }
-            );
-
-        });
-
+const naturalContainer = document.getElementById("naturalDrinks");
+if (naturalContainer) {
+  naturalDrinks.forEach(name => {
+    const span = document.createElement("span");
+    span.textContent = name;
+    naturalContainer.appendChild(span);
+  });
 }
 
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
-/* =========================================================
-   NAVEGAÇÃO ATIVA
-========================================================= */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-const sections =
-    document.querySelectorAll(
-        "main section[id]"
-    );
+menuToggle.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(open));
+});
 
-const navigationLinks =
-    document.querySelectorAll(
-        ".nav-links a"
-    );
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
+});
 
+/* =====================================================
+   ACTIVE NAV LINK (scroll spy)
+===================================================== */
 
-window.addEventListener(
-    "scroll",
-    () => {
+// A secção .hero não tem id; corresponde ao link "#inicio".
+const sections = document.querySelectorAll(".hero, main section[id]");
+const navItems = document.querySelectorAll(".nav-links a");
 
-        let currentSection = "";
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const id = entry.target.id || "inicio";
+    navItems.forEach(item => item.classList.remove("active"));
+    const active = document.querySelector(`.nav-links a[href="#${id}"]`);
+    if (active) active.classList.add("active");
+  });
+}, { rootMargin: "-35% 0px -55% 0px" });
 
-        sections.forEach(section => {
+sections.forEach(section => observer.observe(section));
 
-            const sectionTop =
-                section.offsetTop - 160;
+/* =====================================================
+   YEAR
+===================================================== */
 
-            if (
-                window.scrollY >= sectionTop
-            ) {
-
-                currentSection =
-                    section.getAttribute("id");
-
-            }
-
-        });
-
-
-        navigationLinks.forEach(link => {
-
-            link.classList.remove("active");
-
-            if (
-                link.getAttribute("href") ===
-                `#${currentSection}`
-            ) {
-
-                link.classList.add("active");
-
-            }
-
-        });
-
-    }
-);
-
-
-/* =========================================================
-   ANO AUTOMÁTICO NO FOOTER
-========================================================= */
-
-const yearElement =
-    document.getElementById("year");
-
-if (yearElement) {
-
-    yearElement.textContent =
-        new Date().getFullYear();
-
-}
-
-
-/* =========================================================
-   ANIMAÇÃO AO ENTRAR NO ECRÃ
-========================================================= */
-
-const observer =
-    new IntersectionObserver(
-        entries => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add(
-                        "visible"
-                    );
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.1
-        }
-    );
-
-
-/* =========================================================
-   INICIALIZAÇÃO
-========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
-
-        renderCards(
-            "mainDishes",
-            menuData.mainDishes
-        );
-
-        renderCards(
-            "traditionalDishes",
-            menuData.traditionalDishes
-        );
-
-        renderCards(
-            "sides",
-            menuData.sides
-        );
-
-        renderCards(
-            "cocktailsGrid",
-            menuData.cocktails
-        );
-
-        renderCards(
-            "alcoholGrid",
-            menuData.alcohol
-        );
-
-        renderNaturalDrinks();
-
-
-        /* Observar os cards depois de criados */
-
-        document
-            .querySelectorAll(
-                ".menu-card, .natural-drink"
-            )
-            .forEach(element => {
-
-                observer.observe(element);
-
-            });
-
-    }
-);
+document.getElementById("year").textContent = new Date().getFullYear();
